@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "reference": "PyTorch autograd + torch.optim",
+  "torch_version": "2.12.0+cpu",
+  "cases": [
+    {
+      "dtype": "float64",
+      "optimizer": "sgd",
+      "steps": 5,
+      "atol": 2e-11,
+      "rtol": 2e-11,
+      "max_logit_abs_error": 4.440892098500626e-16,
+      "max_loss_abs_error": 4.440892098500626e-16,
+      "max_gradient_abs_error": 2.220446049250313e-16,
+      "max_parameter_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "dtype": "float64",
+      "optimizer": "adam",
+      "steps": 5,
+      "atol": 2e-11,
+      "rtol": 2e-11,
+      "max_logit_abs_error": 3.3306690738754696e-16,
+      "max_loss_abs_error": 4.440892098500626e-16,
+      "max_gradient_abs_error": 1.1102230246251565e-16,
+      "max_parameter_abs_error": 5.204170427930421e-18
+    },
+    {
+      "dtype": "float32",
+      "optimizer": "sgd",
+      "steps": 5,
+      "atol": 3e-05,
+      "rtol": 3e-05,
+      "max_logit_abs_error": 1.1920928955078125e-07,
+      "max_loss_abs_error": 0.0,
+      "max_gradient_abs_error": 5.960464477539063e-08,
+      "max_parameter_abs_error": 2.9802322387695312e-08
+    },
+    {
+      "dtype": "float32",
+      "optimizer": "adam",
+      "steps": 5,
+      "atol": 3e-05,
+      "rtol": 3e-05,
+      "max_logit_abs_error": 2.384185791015625e-07,
+      "max_loss_abs_error": 2.384185791015625e-07,
+      "max_gradient_abs_error": 4.842877388000488e-08,
+      "max_parameter_abs_error": 5.960464477539063e-08
+    }
+  ],
+  "scope": "4 fixed dtype/optimizer cases, 5 steps each; not a formal proof"
+}

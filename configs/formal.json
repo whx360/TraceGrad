@@ -1,0 +1,19 @@
+{
+  "protocol": "formal_v1",
+  "dataset": "Fashion-MNIST official",
+  "split_seed": 2026,
+  "seeds": [17, 29, 43],
+  "epochs": 8,
+  "batch_size": 256,
+  "lr": 0.001,
+  "optimizer": "adam",
+  "dtype": "float32",
+  "classes": 10,
+  "variants": [
+    {"name": "softmax", "hidden_dim": 0, "l2": 0.0},
+    {"name": "mlp", "hidden_dim": 64, "l2": 0.0},
+    {"name": "mlp_l2", "hidden_dim": 64, "l2": 0.0001}
+  ],
+  "selection": "lowest validation cross-entropy epoch within each fixed run",
+  "test_policy": "evaluate frozen selected checkpoints once; no test-driven tuning"
+}

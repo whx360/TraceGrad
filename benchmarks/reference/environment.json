@@ -1,0 +1,15 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpu": "AMD Ryzen 7 7435H",
+  "logical_processors": 16,
+  "ram_bytes": 16902803456,
+  "versions": {
+    "numpy": "1.26.4",
+    "torch": "2.12.0+cpu",
+    "threadpoolctl": "3.5.0",
+    "psutil": "5.9.0",
+    "matplotlib": "3.9.2"
+  },
+  "control": "threadpool_limits(limits=1,user_api=blas) throughout campaign",
+  "device": "CPU; no GPU training or performance claim"
+}

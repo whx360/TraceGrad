@@ -1,0 +1,6 @@
+# Observed direct dependencies on this Windows machine; not a transitive or portable lock.
+numpy==1.26.4
+matplotlib==3.9.2
+threadpoolctl==3.5.0
+psutil==5.9.0
+torch==2.12.0+cpu

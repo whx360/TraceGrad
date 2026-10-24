@@ -1,0 +1,258 @@
+{
+  "status": "passed",
+  "protocol": {
+    "seed": 2026,
+    "blas_threads": 1,
+    "warmup_calls_per_variant": 3,
+    "samples_per_variant": 15,
+    "inner_calls_per_sample": 10,
+    "order": "alternate baseline-first and optimized-first by paired sample",
+    "clock": "perf_counter_ns wall time / inner calls",
+    "ce_dtype": "float64",
+    "mlp_dtype": "float32",
+    "optimizer_updates": false
+  },
+  "comparisons": [
+    {
+      "id": "mlp_forward_backward",
+      "shape": [
+        256,
+        784,
+        64,
+        10
+      ],
+      "dtype": "float32",
+      "baseline_name": "eager_two_parent_vjp",
+      "optimized_name": "selective_parent_vjp",
+      "baseline": {
+        "samples": 15,
+        "median_seconds": 0.0016866300000000002,
+        "p95_of_inner_mean_seconds": 0.001942829,
+        "min_seconds": 0.00162954,
+        "max_seconds": 0.0019898900000000002
+      },
+      "optimized": {
+        "samples": 15,
+        "median_seconds": 0.00106237,
+        "p95_of_inner_mean_seconds": 0.001142174,
+        "min_seconds": 0.00102428,
+        "max_seconds": 0.0011945900000000001
+      },
+      "ratio_of_median_times": 1.5876107194292008,
+      "median_paired_ratio": 1.6212944338966484,
+      "correctness": {
+        "loss_absolute_error": 0.0,
+        "max_parameter_gradient_absolute_error": 0.0,
+        "atol": 1e-06,
+        "rtol": 3e-05,
+        "passed": true
+      },
+      "baseline_graph": {
+        "nodes": 11,
+        "edges": 10,
+        "tracked_nodes": 10,
+        "unique_array_bytes": 1252140
+      },
+      "optimized_graph": {
+        "nodes": 11,
+        "edges": 10,
+        "tracked_nodes": 10,
+        "unique_array_bytes": 1252140
+      },
+      "optimizer_update": false,
+      "avoided_input_gradient_shape": [
+        256,
+        784
+      ],
+      "avoided_matmul_flops_per_call": 25690112
+    },
+    {
+      "id": "ce_128x10",
+      "shape": [
+        128,
+        10
+      ],
+      "dtype": "float64",
+      "baseline_name": "stable_graph_composed_ce",
+      "optimized_name": "fused_ce",
+      "baseline": {
+        "samples": 15,
+        "median_seconds": 0.00042626000000000003,
+        "p95_of_inner_mean_seconds": 0.00047987699999999997,
+        "min_seconds": 0.00038035,
+        "max_seconds": 0.00048925
+      },
+      "optimized": {
+        "samples": 15,
+        "median_seconds": 0.00012963,
+        "p95_of_inner_mean_seconds": 0.000146753,
+        "min_seconds": 0.00012433,
+        "max_seconds": 0.00014683
+      },
+      "ratio_of_median_times": 3.2882820334799048,
+      "median_paired_ratio": 3.0486957706190836,
+      "correctness": {
+        "loss_absolute_error": 0.0,
+        "max_gradient_absolute_error": 0.0,
+        "atol": 5e-12,
+        "rtol": 5e-12,
+        "passed": true
+      },
+      "baseline_graph": {
+        "nodes": 12,
+        "edges": 12,
+        "tracked_nodes": 9,
+        "unique_array_bytes": 56352
+      },
+      "optimized_graph": {
+        "nodes": 2,
+        "edges": 1,
+        "tracked_nodes": 2,
+        "unique_array_bytes": 21512
+      }
+    },
+    {
+      "id": "ce_512x10",
+      "shape": [
+        512,
+        10
+      ],
+      "dtype": "float64",
+      "baseline_name": "stable_graph_composed_ce",
+      "optimized_name": "fused_ce",
+      "baseline": {
+        "samples": 15,
+        "median_seconds": 0.00053482,
+        "p95_of_inner_mean_seconds": 0.0006006259999999999,
+        "min_seconds": 0.0004962300000000001,
+        "max_seconds": 0.00062871
+      },
+      "optimized": {
+        "samples": 15,
+        "median_seconds": 0.00019398,
+        "p95_of_inner_mean_seconds": 0.00021670599999999994,
+        "min_seconds": 0.00018453,
+        "max_seconds": 0.00024024
+      },
+      "ratio_of_median_times": 2.7570883596247033,
+      "median_paired_ratio": 2.792566063304618,
+      "correctness": {
+        "loss_absolute_error": 0.0,
+        "max_gradient_absolute_error": 0.0,
+        "atol": 5e-12,
+        "rtol": 5e-12,
+        "passed": true
+      },
+      "baseline_graph": {
+        "nodes": 12,
+        "edges": 12,
+        "tracked_nodes": 9,
+        "unique_array_bytes": 225312
+      },
+      "optimized_graph": {
+        "nodes": 2,
+        "edges": 1,
+        "tracked_nodes": 2,
+        "unique_array_bytes": 86024
+      }
+    },
+    {
+      "id": "ce_256x100",
+      "shape": [
+        256,
+        100
+      ],
+      "dtype": "float64",
+      "baseline_name": "stable_graph_composed_ce",
+      "optimized_name": "fused_ce",
+      "baseline": {
+        "samples": 15,
+        "median_seconds": 0.00130329,
+        "p95_of_inner_mean_seconds": 0.0016189219999999996,
+        "min_seconds": 0.00122108,
+        "max_seconds": 0.00196391
+      },
+      "optimized": {
+        "samples": 15,
+        "median_seconds": 0.00036378,
+        "p95_of_inner_mean_seconds": 0.0004538459999999999,
+        "min_seconds": 0.00031943,
+        "max_seconds": 0.00051483
+      },
+      "ratio_of_median_times": 3.5826323602177137,
+      "median_paired_ratio": 3.7573740297329303,
+      "correctness": {
+        "loss_absolute_error": 0.0,
+        "max_gradient_absolute_error": 0.0,
+        "atol": 5e-12,
+        "rtol": 5e-12,
+        "passed": true
+      },
+      "baseline_graph": {
+        "nodes": 12,
+        "edges": 12,
+        "tracked_nodes": 9,
+        "unique_array_bytes": 1034272
+      },
+      "optimized_graph": {
+        "nodes": 2,
+        "edges": 1,
+        "tracked_nodes": 2,
+        "unique_array_bytes": 411656
+      }
+    },
+    {
+      "id": "ce_256x1000",
+      "shape": [
+        256,
+        1000
+      ],
+      "dtype": "float64",
+      "baseline_name": "stable_graph_composed_ce",
+      "optimized_name": "fused_ce",
+      "baseline": {
+        "samples": 15,
+        "median_seconds": 0.00927509,
+        "p95_of_inner_mean_seconds": 0.01011205,
+        "min_seconds": 0.00907409,
+        "max_seconds": 0.01033129
+      },
+      "optimized": {
+        "samples": 15,
+        "median_seconds": 0.00410368,
+        "p95_of_inner_mean_seconds": 0.004898091,
+        "min_seconds": 0.00397014,
+        "max_seconds": 0.00498214
+      },
+      "ratio_of_median_times": 2.2601884162507795,
+      "median_paired_ratio": 2.2519816944542335,
+      "correctness": {
+        "loss_absolute_error": 0.0,
+        "max_gradient_absolute_error": 0.0,
+        "atol": 5e-12,
+        "rtol": 5e-12,
+        "passed": true
+      },
+      "baseline_graph": {
+        "nodes": 12,
+        "edges": 12,
+        "tracked_nodes": 9,
+        "unique_array_bytes": 10250272
+      },
+      "optimized_graph": {
+        "nodes": 2,
+        "edges": 1,
+        "tracked_nodes": 2,
+        "unique_array_bytes": 4098056
+      }
+    }
+  ],
+  "raw_row_count": 150,
+  "limits": [
+    "CE kernel ratios are not whole-training acceleration.",
+    "MLP comparison measures forward/backward only; no data loading, validation or optimizer step.",
+    "unique_array_bytes counts retained graph ndarray buffers, not process peak RSS or temporary workspaces.",
+    "Composed CE includes explicit detached row shift and one-hot selection; no claim against every possible manual CE implementation.",
+    "Ratios are measured on fixed shapes/hardware; regressions and timing variability remain in the raw records."
+  ]
+}

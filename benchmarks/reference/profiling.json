@@ -1,0 +1,1418 @@
+{
+  "historical_preoptimization_profile": {
+    "stage": "before_tensor_matmul_optimization",
+    "loops": 50,
+    "shape": [
+      256,
+      784,
+      64,
+      10
+    ],
+    "dtype": "float32",
+    "optimizer_update": false,
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "version": "0.3.23.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Zen"
+      }
+    ],
+    "profile_total_seconds": 0.1074311,
+    "top": [
+      {
+        "file": "<stdin>",
+        "line": 8,
+        "function": "step",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0054854000000000005,
+        "cumulative_seconds": 0.10741010000000001
+      },
+      {
+        "file": "tensor.py",
+        "line": 339,
+        "function": "backward",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0079472,
+        "cumulative_seconds": 0.0631973
+      },
+      {
+        "file": "tensor.py",
+        "line": 267,
+        "function": "<lambda>",
+        "primitive_calls": 100,
+        "calls": 100,
+        "self_seconds": 0.0409191,
+        "cumulative_seconds": 0.0409191
+      },
+      {
+        "file": "nn.py",
+        "line": 59,
+        "function": "__call__",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.00038970000000000004,
+        "cumulative_seconds": 0.0293314
+      },
+      {
+        "file": "tensor.py",
+        "line": 259,
+        "function": "__matmul__",
+        "primitive_calls": 100,
+        "calls": 100,
+        "self_seconds": 0.0184678,
+        "cumulative_seconds": 0.021458900000000003
+      },
+      {
+        "file": "tensor.py",
+        "line": 439,
+        "function": "cross_entropy",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0025181,
+        "cumulative_seconds": 0.0088556
+      },
+      {
+        "file": "tensor.py",
+        "line": 115,
+        "function": "_operation",
+        "primitive_calls": 300,
+        "calls": 300,
+        "self_seconds": 0.00202,
+        "cumulative_seconds": 0.006163200000000001
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+        "primitive_calls": 1800,
+        "calls": 1800,
+        "self_seconds": 0.0059931,
+        "cumulative_seconds": 0.0059931
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'all' of 'numpy.ndarray' objects>",
+        "primitive_calls": 1350,
+        "calls": 1350,
+        "self_seconds": 0.0007688,
+        "cumulative_seconds": 0.0050152
+      },
+      {
+        "file": "tensor.py",
+        "line": 210,
+        "function": "__add__",
+        "primitive_calls": 100,
+        "calls": 100,
+        "self_seconds": 0.0032282,
+        "cumulative_seconds": 0.0046461
+      },
+      {
+        "file": "_methods.py",
+        "line": 61,
+        "function": "_all",
+        "primitive_calls": 1450,
+        "calls": 1450,
+        "self_seconds": 0.0004373,
+        "cumulative_seconds": 0.0045109
+      },
+      {
+        "file": "tensor.py",
+        "line": 48,
+        "function": "_validate",
+        "primitive_calls": 300,
+        "calls": 300,
+        "self_seconds": 0.001806,
+        "cumulative_seconds": 0.0035819000000000003
+      },
+      {
+        "file": "tensor.py",
+        "line": 305,
+        "function": "relu",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0016259,
+        "cumulative_seconds": 0.002762
+      },
+      {
+        "file": "_ufunc_config.py",
+        "line": 33,
+        "function": "seterr",
+        "primitive_calls": 800,
+        "calls": 800,
+        "self_seconds": 0.0009849000000000001,
+        "cumulative_seconds": 0.0024481000000000004
+      },
+      {
+        "file": "tensor.py",
+        "line": 427,
+        "function": "_labels",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0010078,
+        "cumulative_seconds": 0.0022824
+      },
+      {
+        "file": "tensor.py",
+        "line": 411,
+        "function": "_topological",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0011538,
+        "cumulative_seconds": 0.0021308
+      },
+      {
+        "file": "tensor.py",
+        "line": 213,
+        "function": "<lambda>",
+        "primitive_calls": 100,
+        "calls": 100,
+        "self_seconds": 0.000114,
+        "cumulative_seconds": 0.0020310000000000003
+      },
+      {
+        "file": "tensor.py",
+        "line": 75,
+        "function": "_unbroadcast",
+        "primitive_calls": 200,
+        "calls": 200,
+        "self_seconds": 0.0006519000000000001,
+        "cumulative_seconds": 0.0018820000000000002
+      },
+      {
+        "file": "_ufunc_config.py",
+        "line": 430,
+        "function": "__enter__",
+        "primitive_calls": 400,
+        "calls": 400,
+        "self_seconds": 0.0003287,
+        "cumulative_seconds": 0.001616
+      },
+      {
+        "file": "_ufunc_config.py",
+        "line": 435,
+        "function": "__exit__",
+        "primitive_calls": 400,
+        "calls": 400,
+        "self_seconds": 0.00039440000000000005,
+        "cumulative_seconds": 0.0015552
+      },
+      {
+        "file": "tensor.py",
+        "line": 456,
+        "function": "vjp",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0010897,
+        "cumulative_seconds": 0.0013222000000000002
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'sum' of 'numpy.ndarray' objects>",
+        "primitive_calls": 150,
+        "calls": 150,
+        "self_seconds": 0.00014670000000000002,
+        "cumulative_seconds": 0.0011749
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'mean' of 'numpy.ndarray' objects>",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 7.1e-05,
+        "cumulative_seconds": 0.0011076
+      },
+      {
+        "file": "_methods.py",
+        "line": 101,
+        "function": "_mean",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0005125,
+        "cumulative_seconds": 0.0010366000000000002
+      },
+      {
+        "file": "_methods.py",
+        "line": 47,
+        "function": "_sum",
+        "primitive_calls": 150,
+        "calls": 150,
+        "self_seconds": 5.25e-05,
+        "cumulative_seconds": 0.0010282000000000002
+      },
+      {
+        "file": "_ufunc_config.py",
+        "line": 132,
+        "function": "geterr",
+        "primitive_calls": 800,
+        "calls": 800,
+        "self_seconds": 0.0008383,
+        "cumulative_seconds": 0.0009123
+      },
+      {
+        "file": "tensor.py",
+        "line": 308,
+        "function": "<lambda>",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 0.0007625,
+        "cumulative_seconds": 0.0007625
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'copy' of 'numpy.ndarray' objects>",
+        "primitive_calls": 250,
+        "calls": 250,
+        "self_seconds": 0.0007414,
+        "cumulative_seconds": 0.0007414
+      },
+      {
+        "file": "fromnumeric.py",
+        "line": 2322,
+        "function": "any",
+        "primitive_calls": 100,
+        "calls": 100,
+        "self_seconds": 0.0001673,
+        "cumulative_seconds": 0.0006902000000000001
+      },
+      {
+        "file": "~",
+        "line": 0,
+        "function": "<method 'max' of 'numpy.ndarray' objects>",
+        "primitive_calls": 50,
+        "calls": 50,
+        "self_seconds": 7.99e-05,
+        "cumulative_seconds": 0.0006733
+      }
+    ],
+    "avoidable_input_gradient_shape": [
+      256,
+      784
+    ],
+    "avoidable_input_gradient_matmul_flops_per_step": 25690112,
+    "source_scope": "captured from unchanged runtime before editing Tensor.__matmul__"
+  },
+  "profiles": {
+    "mlp_eager": {
+      "loops": 50,
+      "total_profile_seconds": 0.09631589999999997,
+      "top": [
+        {
+          "file": "benchmarks.py",
+          "line": 158,
+          "function": "baseline",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0053171,
+          "cumulative_seconds": 0.09626430000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 356,
+          "function": "backward",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0069563,
+          "cumulative_seconds": 0.05791
+        },
+        {
+          "file": "benchmarks.py",
+          "line": 38,
+          "function": "<lambda>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0381135,
+          "cumulative_seconds": 0.0381135
+        },
+        {
+          "file": "benchmarks.py",
+          "line": 41,
+          "function": "_eager_classifier",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0001966,
+          "cumulative_seconds": 0.024941400000000002
+        },
+        {
+          "file": "benchmarks.py",
+          "line": 29,
+          "function": "_eager_matmul",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.016104800000000002,
+          "cumulative_seconds": 0.018400100000000003
+        },
+        {
+          "file": "tensor.py",
+          "line": 456,
+          "function": "cross_entropy",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0020873000000000003,
+          "cumulative_seconds": 0.0077695
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "primitive_calls": 1800,
+          "calls": 1800,
+          "self_seconds": 0.0052397,
+          "cumulative_seconds": 0.0052397
+        },
+        {
+          "file": "tensor.py",
+          "line": 128,
+          "function": "_operation",
+          "primitive_calls": 300,
+          "calls": 300,
+          "self_seconds": 0.0016896,
+          "cumulative_seconds": 0.0050813
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'all' of 'numpy.ndarray' objects>",
+          "primitive_calls": 1350,
+          "calls": 1350,
+          "self_seconds": 0.0007041,
+          "cumulative_seconds": 0.004325600000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 223,
+          "function": "__add__",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0025881000000000003,
+          "cumulative_seconds": 0.0038891000000000004
+        },
+        {
+          "file": "_methods.py",
+          "line": 61,
+          "function": "_all",
+          "primitive_calls": 1450,
+          "calls": 1450,
+          "self_seconds": 0.0003822,
+          "cumulative_seconds": 0.0038439000000000004
+        },
+        {
+          "file": "tensor.py",
+          "line": 48,
+          "function": "_validate",
+          "primitive_calls": 300,
+          "calls": 300,
+          "self_seconds": 0.0015461000000000001,
+          "cumulative_seconds": 0.0028943000000000003
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 33,
+          "function": "seterr",
+          "primitive_calls": 900,
+          "calls": 900,
+          "self_seconds": 0.0009659000000000001,
+          "cumulative_seconds": 0.0024275
+        },
+        {
+          "file": "tensor.py",
+          "line": 322,
+          "function": "relu",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0014477000000000001,
+          "cumulative_seconds": 0.0024196
+        },
+        {
+          "file": "tensor.py",
+          "line": 428,
+          "function": "_topological",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0010679,
+          "cumulative_seconds": 0.0019617000000000002
+        },
+        {
+          "file": "tensor.py",
+          "line": 226,
+          "function": "<lambda>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0001028,
+          "cumulative_seconds": 0.0018603
+        },
+        {
+          "file": "tensor.py",
+          "line": 88,
+          "function": "_unbroadcast",
+          "primitive_calls": 200,
+          "calls": 200,
+          "self_seconds": 0.0006549,
+          "cumulative_seconds": 0.0017252
+        },
+        {
+          "file": "tensor.py",
+          "line": 444,
+          "function": "_labels",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0007411000000000001,
+          "cumulative_seconds": 0.0016551
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 430,
+          "function": "__enter__",
+          "primitive_calls": 450,
+          "calls": 450,
+          "self_seconds": 0.00032720000000000004,
+          "cumulative_seconds": 0.0015878
+        },
+        {
+          "file": "tensor.py",
+          "line": 57,
+          "function": "_finite_mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0003235,
+          "cumulative_seconds": 0.0015495
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 435,
+          "function": "__exit__",
+          "primitive_calls": 450,
+          "calls": 450,
+          "self_seconds": 0.000357,
+          "cumulative_seconds": 0.0015239000000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 473,
+          "function": "vjp",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0009459000000000001,
+          "cumulative_seconds": 0.0011541000000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sum' of 'numpy.ndarray' objects>",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 0.00012880000000000001,
+          "cumulative_seconds": 0.0011303
+        },
+        {
+          "file": "_methods.py",
+          "line": 47,
+          "function": "_sum",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 4.57e-05,
+          "cumulative_seconds": 0.0010015
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 132,
+          "function": "geterr",
+          "primitive_calls": 900,
+          "calls": 900,
+          "self_seconds": 0.0008656,
+          "cumulative_seconds": 0.0009417000000000001
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3385,
+          "function": "mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 8.960000000000001e-05,
+          "cumulative_seconds": 0.0009069000000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 101,
+          "function": "_mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0004022,
+          "cumulative_seconds": 0.0008173000000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 325,
+          "function": "<lambda>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.000674,
+          "cumulative_seconds": 0.000674
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'max' of 'numpy.ndarray' objects>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 6.35e-05,
+          "cumulative_seconds": 0.0005863
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'numpy.ndarray' objects>",
+          "primitive_calls": 250,
+          "calls": 250,
+          "self_seconds": 0.0005435,
+          "cumulative_seconds": 0.0005435
+        }
+      ],
+      "binary": "profiles/mlp_eager.prof",
+      "text": "profiles/mlp_eager.txt"
+    },
+    "mlp_selective": {
+      "loops": 50,
+      "total_profile_seconds": 0.06033849999999999,
+      "top": [
+        {
+          "file": "benchmarks.py",
+          "line": 164,
+          "function": "optimized",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0003241,
+          "cumulative_seconds": 0.060315200000000006
+        },
+        {
+          "file": "tensor.py",
+          "line": 356,
+          "function": "backward",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0058487,
+          "cumulative_seconds": 0.0332845
+        },
+        {
+          "file": "nn.py",
+          "line": 59,
+          "function": "__call__",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0002389,
+          "cumulative_seconds": 0.019593100000000002
+        },
+        {
+          "file": "tensor.py",
+          "line": 272,
+          "function": "__matmul__",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.014527300000000002,
+          "cumulative_seconds": 0.0160525
+        },
+        {
+          "file": "tensor.py",
+          "line": 279,
+          "function": "vjp",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.015307500000000002,
+          "cumulative_seconds": 0.015307500000000002
+        },
+        {
+          "file": "tensor.py",
+          "line": 456,
+          "function": "cross_entropy",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0016094000000000002,
+          "cumulative_seconds": 0.006962
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "primitive_calls": 1800,
+          "calls": 1800,
+          "self_seconds": 0.0045526,
+          "cumulative_seconds": 0.0045526
+        },
+        {
+          "file": "tensor.py",
+          "line": 128,
+          "function": "_operation",
+          "primitive_calls": 300,
+          "calls": 300,
+          "self_seconds": 0.0015644,
+          "cumulative_seconds": 0.0037834
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'all' of 'numpy.ndarray' objects>",
+          "primitive_calls": 1350,
+          "calls": 1350,
+          "self_seconds": 0.0006358000000000001,
+          "cumulative_seconds": 0.0036810000000000002
+        },
+        {
+          "file": "_methods.py",
+          "line": 61,
+          "function": "_all",
+          "primitive_calls": 1450,
+          "calls": 1450,
+          "self_seconds": 0.00037880000000000005,
+          "cumulative_seconds": 0.0032788
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 33,
+          "function": "seterr",
+          "primitive_calls": 900,
+          "calls": 900,
+          "self_seconds": 0.0010063000000000001,
+          "cumulative_seconds": 0.0023747
+        },
+        {
+          "file": "tensor.py",
+          "line": 428,
+          "function": "_topological",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0010614,
+          "cumulative_seconds": 0.0019571000000000002
+        },
+        {
+          "file": "tensor.py",
+          "line": 223,
+          "function": "__add__",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0007075,
+          "cumulative_seconds": 0.0018281
+        },
+        {
+          "file": "tensor.py",
+          "line": 48,
+          "function": "_validate",
+          "primitive_calls": 300,
+          "calls": 300,
+          "self_seconds": 0.0007403,
+          "cumulative_seconds": 0.0017563000000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 226,
+          "function": "<lambda>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 9.88e-05,
+          "cumulative_seconds": 0.0016959000000000002
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 430,
+          "function": "__enter__",
+          "primitive_calls": 450,
+          "calls": 450,
+          "self_seconds": 0.00032910000000000003,
+          "cumulative_seconds": 0.0016049
+        },
+        {
+          "file": "tensor.py",
+          "line": 88,
+          "function": "_unbroadcast",
+          "primitive_calls": 200,
+          "calls": 200,
+          "self_seconds": 0.0005631000000000001,
+          "cumulative_seconds": 0.0015651
+        },
+        {
+          "file": "tensor.py",
+          "line": 444,
+          "function": "_labels",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.000652,
+          "cumulative_seconds": 0.001464
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 435,
+          "function": "__exit__",
+          "primitive_calls": 450,
+          "calls": 450,
+          "self_seconds": 0.0003398,
+          "cumulative_seconds": 0.0014387
+        },
+        {
+          "file": "tensor.py",
+          "line": 57,
+          "function": "_finite_mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0002922,
+          "cumulative_seconds": 0.0014384
+        },
+        {
+          "file": "tensor.py",
+          "line": 322,
+          "function": "relu",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0008301000000000001,
+          "cumulative_seconds": 0.0014369
+        },
+        {
+          "file": "tensor.py",
+          "line": 473,
+          "function": "vjp",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0009329000000000001,
+          "cumulative_seconds": 0.0011378
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sum' of 'numpy.ndarray' objects>",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 0.00012030000000000001,
+          "cumulative_seconds": 0.0010483
+        },
+        {
+          "file": "_methods.py",
+          "line": 47,
+          "function": "_sum",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 4.78e-05,
+          "cumulative_seconds": 0.000928
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 132,
+          "function": "geterr",
+          "primitive_calls": 900,
+          "calls": 900,
+          "self_seconds": 0.0008277,
+          "cumulative_seconds": 0.0009040000000000001
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3385,
+          "function": "mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 8.070000000000001e-05,
+          "cumulative_seconds": 0.0008289
+        },
+        {
+          "file": "_methods.py",
+          "line": 101,
+          "function": "_mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.00036740000000000004,
+          "cumulative_seconds": 0.0007482000000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 325,
+          "function": "<lambda>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0006688,
+          "cumulative_seconds": 0.0006688
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'max' of 'numpy.ndarray' objects>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 5.6300000000000006e-05,
+          "cumulative_seconds": 0.0005447000000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'numpy.ndarray' objects>",
+          "primitive_calls": 250,
+          "calls": 250,
+          "self_seconds": 0.0005113,
+          "cumulative_seconds": 0.0005113
+        }
+      ],
+      "binary": "profiles/mlp_selective.prof",
+      "text": "profiles/mlp_selective.txt"
+    },
+    "ce_composed_256x1000": {
+      "loops": 50,
+      "total_profile_seconds": 0.5288709999999999,
+      "top": [
+        {
+          "file": "benchmarks.py",
+          "line": 138,
+          "function": "baseline",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.028941900000000003,
+          "cumulative_seconds": 0.5288430000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 480,
+          "function": "cross_entropy_composed",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0225062,
+          "cumulative_seconds": 0.2906974
+        },
+        {
+          "file": "tensor.py",
+          "line": 356,
+          "function": "backward",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0895668,
+          "cumulative_seconds": 0.204909
+        },
+        {
+          "file": "tensor.py",
+          "line": 338,
+          "function": "logsumexp",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.1108716,
+          "cumulative_seconds": 0.13173590000000002
+        },
+        {
+          "file": "tensor.py",
+          "line": 242,
+          "function": "<lambda>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0481986,
+          "cumulative_seconds": 0.0495152
+        },
+        {
+          "file": "tensor.py",
+          "line": 114,
+          "function": "__init__",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 0.00025820000000000004,
+          "cumulative_seconds": 0.0486614
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "primitive_calls": 2050,
+          "calls": 2050,
+          "self_seconds": 0.048639100000000005,
+          "cumulative_seconds": 0.048639100000000005
+        },
+        {
+          "file": "tensor.py",
+          "line": 31,
+          "function": "_array",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 0.0012983,
+          "cumulative_seconds": 0.0484032
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method numpy.array>",
+          "primitive_calls": 250,
+          "calls": 250,
+          "self_seconds": 0.0380056,
+          "cumulative_seconds": 0.0380056
+        },
+        {
+          "file": "tensor.py",
+          "line": 233,
+          "function": "__sub__",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0004312,
+          "cumulative_seconds": 0.0298752
+        },
+        {
+          "file": "tensor.py",
+          "line": 239,
+          "function": "__mul__",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0217892,
+          "cumulative_seconds": 0.028803500000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sum' of 'numpy.ndarray' objects>",
+          "primitive_calls": 200,
+          "calls": 200,
+          "self_seconds": 0.0005886,
+          "cumulative_seconds": 0.026706200000000003
+        },
+        {
+          "file": "tensor.py",
+          "line": 223,
+          "function": "__add__",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.020368400000000002,
+          "cumulative_seconds": 0.0266576
+        },
+        {
+          "file": "_methods.py",
+          "line": 47,
+          "function": "_sum",
+          "primitive_calls": 200,
+          "calls": 200,
+          "self_seconds": 0.0001552,
+          "cumulative_seconds": 0.0261176
+        },
+        {
+          "file": "tensor.py",
+          "line": 349,
+          "function": "vjp",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0227748,
+          "cumulative_seconds": 0.023414800000000003
+        },
+        {
+          "file": "tensor.py",
+          "line": 48,
+          "function": "_validate",
+          "primitive_calls": 600,
+          "calls": 600,
+          "self_seconds": 0.018230800000000002,
+          "cumulative_seconds": 0.023254
+        },
+        {
+          "file": "tensor.py",
+          "line": 128,
+          "function": "_operation",
+          "primitive_calls": 450,
+          "calls": 450,
+          "self_seconds": 0.0038701000000000004,
+          "cumulative_seconds": 0.019196
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'numpy.ndarray' objects>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0134952,
+          "cumulative_seconds": 0.0134952
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'max' of 'numpy.ndarray' objects>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.00025140000000000004,
+          "cumulative_seconds": 0.011605500000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'all' of 'numpy.ndarray' objects>",
+          "primitive_calls": 1250,
+          "calls": 1250,
+          "self_seconds": 0.001394,
+          "cumulative_seconds": 0.011481300000000002
+        },
+        {
+          "file": "_methods.py",
+          "line": 39,
+          "function": "_amax",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 7.77e-05,
+          "cumulative_seconds": 0.0113541
+        },
+        {
+          "file": "_methods.py",
+          "line": 61,
+          "function": "_all",
+          "primitive_calls": 1550,
+          "calls": 1550,
+          "self_seconds": 0.0007165,
+          "cumulative_seconds": 0.010897700000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 289,
+          "function": "sum",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.00035590000000000003,
+          "cumulative_seconds": 0.010299
+        },
+        {
+          "file": "tensor.py",
+          "line": 88,
+          "function": "_unbroadcast",
+          "primitive_calls": 400,
+          "calls": 400,
+          "self_seconds": 0.0018685000000000002,
+          "cumulative_seconds": 0.009944300000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 226,
+          "function": "<lambda>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.00015120000000000002,
+          "cumulative_seconds": 0.0084274
+        },
+        {
+          "file": "tensor.py",
+          "line": 300,
+          "function": "mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0005961,
+          "cumulative_seconds": 0.0077418
+        },
+        {
+          "file": "tensor.py",
+          "line": 444,
+          "function": "_labels",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0027665000000000003,
+          "cumulative_seconds": 0.0055144
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 33,
+          "function": "seterr",
+          "primitive_calls": 1000,
+          "calls": 1000,
+          "self_seconds": 0.0017077000000000001,
+          "cumulative_seconds": 0.0045122
+        },
+        {
+          "file": "tensor.py",
+          "line": 197,
+          "function": "zero_grad",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0039793,
+          "cumulative_seconds": 0.0039793
+        },
+        {
+          "file": "tensor.py",
+          "line": 247,
+          "function": "__truediv__",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0008844,
+          "cumulative_seconds": 0.0036072
+        }
+      ],
+      "binary": "profiles/ce_composed_256x1000.prof",
+      "text": "profiles/ce_composed_256x1000.txt"
+    },
+    "ce_fused_256x1000": {
+      "loops": 50,
+      "total_profile_seconds": 0.20746089999999995,
+      "top": [
+        {
+          "file": "benchmarks.py",
+          "line": 144,
+          "function": "optimized",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0090174,
+          "cumulative_seconds": 0.2074328
+        },
+        {
+          "file": "tensor.py",
+          "line": 456,
+          "function": "cross_entropy",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.09327890000000001,
+          "cumulative_seconds": 0.1159723
+        },
+        {
+          "file": "tensor.py",
+          "line": 356,
+          "function": "backward",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0262,
+          "cumulative_seconds": 0.0786126
+        },
+        {
+          "file": "tensor.py",
+          "line": 473,
+          "function": "vjp",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0214995,
+          "cumulative_seconds": 0.0355132
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'numpy.ndarray' objects>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0258466,
+          "cumulative_seconds": 0.0258466
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "primitive_calls": 500,
+          "calls": 500,
+          "self_seconds": 0.0139241,
+          "cumulative_seconds": 0.0139241
+        },
+        {
+          "file": "tensor.py",
+          "line": 444,
+          "function": "_labels",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0032168,
+          "cumulative_seconds": 0.006621800000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'max' of 'numpy.ndarray' objects>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0001393,
+          "cumulative_seconds": 0.005964400000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 39,
+          "function": "_amax",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 4.8700000000000005e-05,
+          "cumulative_seconds": 0.005825100000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sum' of 'numpy.ndarray' objects>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 8.38e-05,
+          "cumulative_seconds": 0.0057324
+        },
+        {
+          "file": "_methods.py",
+          "line": 47,
+          "function": "_sum",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 2.32e-05,
+          "cumulative_seconds": 0.0056486
+        },
+        {
+          "file": "tensor.py",
+          "line": 197,
+          "function": "zero_grad",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0037542,
+          "cumulative_seconds": 0.0037542
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 33,
+          "function": "seterr",
+          "primitive_calls": 400,
+          "calls": 400,
+          "self_seconds": 0.0007364,
+          "cumulative_seconds": 0.0020386000000000002
+        },
+        {
+          "file": "tensor.py",
+          "line": 57,
+          "function": "_finite_mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0004662,
+          "cumulative_seconds": 0.0019977000000000003
+        },
+        {
+          "file": "_methods.py",
+          "line": 61,
+          "function": "_all",
+          "primitive_calls": 250,
+          "calls": 250,
+          "self_seconds": 0.0001122,
+          "cumulative_seconds": 0.0018042000000000002
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 435,
+          "function": "__exit__",
+          "primitive_calls": 200,
+          "calls": 200,
+          "self_seconds": 0.0005117,
+          "cumulative_seconds": 0.0017481
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'all' of 'numpy.ndarray' objects>",
+          "primitive_calls": 150,
+          "calls": 150,
+          "self_seconds": 0.0001819,
+          "cumulative_seconds": 0.0016727
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2322,
+          "function": "any",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0003532,
+          "cumulative_seconds": 0.0015630000000000002
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 71,
+          "function": "_wrapreduction",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0005091000000000001,
+          "cumulative_seconds": 0.0012098
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3385,
+          "function": "mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.00014350000000000002,
+          "cumulative_seconds": 0.0011611
+        },
+        {
+          "file": "numerictypes.py",
+          "line": 357,
+          "function": "issubdtype",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0005237,
+          "cumulative_seconds": 0.0011137
+        },
+        {
+          "file": "tensor.py",
+          "line": 128,
+          "function": "_operation",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0004823,
+          "cumulative_seconds": 0.0010752000000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 101,
+          "function": "_mean",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0003366,
+          "cumulative_seconds": 0.0010176
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 430,
+          "function": "__enter__",
+          "primitive_calls": 200,
+          "calls": 200,
+          "self_seconds": 0.00021500000000000002,
+          "cumulative_seconds": 0.0010172
+        },
+        {
+          "file": "_ufunc_config.py",
+          "line": 132,
+          "function": "geterr",
+          "primitive_calls": 400,
+          "calls": 400,
+          "self_seconds": 0.0006723,
+          "cumulative_seconds": 0.0007068
+        },
+        {
+          "file": "tensor.py",
+          "line": 428,
+          "function": "_topological",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.00039670000000000005,
+          "cumulative_seconds": 0.0006522
+        },
+        {
+          "file": "numerictypes.py",
+          "line": 283,
+          "function": "issubclass_",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.000326,
+          "cumulative_seconds": 0.000567
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'all' of 'numpy.generic' objects>",
+          "primitive_calls": 100,
+          "calls": 100,
+          "self_seconds": 0.0002357,
+          "cumulative_seconds": 0.0005491000000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'astype' of 'numpy.ndarray' objects>",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0005133000000000001,
+          "cumulative_seconds": 0.0005133000000000001
+        },
+        {
+          "file": "tensor.py",
+          "line": 48,
+          "function": "_validate",
+          "primitive_calls": 50,
+          "calls": 50,
+          "self_seconds": 0.0001549,
+          "cumulative_seconds": 0.0004557
+        }
+      ],
+      "binary": "profiles/ce_fused_256x1000.prof",
+      "text": "profiles/ce_fused_256x1000.txt"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Numerical implementation and fixed configuration used for this recorded experiment; later demo/report/publishing changes excluded.",
+  "files": {
+    "src/tracegrad/benchmarks.py": {
+      "bytes": 13970,
+      "sha256": "dbd4ca7ccbd8189757183d7093342543e14fdedd4c46b8db943fa11ff96c328c"
+    },
+    "src/tracegrad/data.py": {
+      "bytes": 10976,
+      "sha256": "2679b6a4eee0f1b4abb0a75d31f18f377064b0d9752013d909ab82da52385266"
+    },
+    "src/tracegrad/experiments.py": {
+      "bytes": 13850,
+      "sha256": "7ad751b18ca686424ca33b0d7ca3e6a69d3ca7b26ece90eedb41e27ab2db3ae2"
+    },
+    "src/tracegrad/nn.py": {
+      "bytes": 5726,
+      "sha256": "cb61f266b7690388a0c40bfc4053ef4c4b786634802b76b7d7b64caa4a9142f7"
+    },
+    "src/tracegrad/optim.py": {
+      "bytes": 9460,
+      "sha256": "4038997caf0a2939ffd163883537b5f3b32ac02ec6973bd813a192bdc4f5276b"
+    },
+    "src/tracegrad/tensor.py": {
+      "bytes": 21219,
+      "sha256": "efc2742a7475de3d59881d6f43d7431fac39210f2e88b8c3fe7cb6a687d9c0d5"
+    },
+    "src/tracegrad/training.py": {
+      "bytes": 8997,
+      "sha256": "96d1aeab38cccd80821569386d6eb55b45336399d7b7a202d9013f30e2d21925"
+    },
+    "src/tracegrad/verification.py": {
+      "bytes": 3908,
+      "sha256": "6947192ac8a8caa80f808775691325e23e6d54de054825b2b664195e7337da68"
+    },
+    "configs/formal.json": {
+      "bytes": 571,
+      "sha256": "4d59a7dc380cad038f5cd42267bedb87df0cf2e0e3b041a8980d1652a2cefed9"
+    }
+  }
+}
